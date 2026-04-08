@@ -15,4 +15,7 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+  .liquid-glass {
+    @apply bg-white/60 backdrop-blur-2xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.08)];
+  }
 }

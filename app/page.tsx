@@ -235,9 +235,9 @@ function HomeView() {
       <motion.div 
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        className="relative mb-6 h-32 w-32 md:h-40 md:w-40 overflow-hidden rounded-full border-4 border-white shadow-2xl"
+        className="relative mb-8 h-32 w-32 md:h-40 md:w-40 overflow-hidden rounded-full border-4 border-white shadow-2xl"
       >
-        <div className="flex h-full w-full items-center justify-center bg-neutral-50 text-[#0071E3] text-4xl md:text-5xl font-bold">
+        <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-neutral-50 to-neutral-100 text-[#0071E3] text-4xl md:text-5xl font-bold">
           성구
         </div>
       </motion.div>
@@ -245,7 +245,7 @@ function HomeView() {
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.1 }}
-        className="text-3xl md:text-5xl font-bold tracking-tight text-neutral-900"
+        className="text-4xl md:text-6xl font-bold tracking-tight text-neutral-900"
       >
         성구
       </motion.h1>
@@ -253,7 +253,7 @@ function HomeView() {
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2 }}
-        className="mt-2 text-lg md:text-xl text-[#0071E3] font-bold"
+        className="mt-3 text-xl md:text-2xl text-[#0071E3] font-semibold tracking-tight"
       >
         인디웨이
       </motion.p>
@@ -261,7 +261,7 @@ function HomeView() {
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.3 }}
-        className="mt-4 text-neutral-500 font-medium"
+        className="mt-6 text-neutral-500 font-medium text-lg"
       >
         나만의 길을 만들어가는 1인 기업가
       </motion.p>
@@ -273,18 +273,18 @@ function IntroView() {
   const keywords = ['1인 기업', '인디해커', 'Micro SaaS', 'AI', '크리에이터', '저자'];
 
   return (
-    <div className="py-10">
-      <h2 className="text-2xl font-bold mb-8">소개</h2>
-      <div className="space-y-6">
-        <div className="p-6 rounded-3xl bg-neutral-50 border border-neutral-100 leading-relaxed text-neutral-700">
-          안녕하세요 👋 대기업과 스타트업에서 일하다가, 지금은 혼자서 프로덕트를 만들고 있습니다. 
-          AI 도구를 활용해 아이디어를 빠르게 현실로 만드는 걸 좋아합니다. 
-          만든 과정을 글과 영상으로 기록하고 공유하고 있어요.
+    <div className="py-12">
+      <h2 className="text-3xl font-bold mb-10 tracking-tight">소개</h2>
+      <div className="space-y-8">
+        <div className="p-8 rounded-[2rem] liquid-glass leading-relaxed text-neutral-700 text-lg">
+          안녕하세요. 대기업의 안정적인 시스템과 스타트업의 역동적인 환경을 두루 거치며 성장해온 성구입니다. <br /><br />
+          현재는 1인 기업가로서 AI 기술을 활용해 아이디어를 신속하게 제품화하는 과정에 집중하고 있습니다. 
+          제가 배우고 만드는 모든 과정은 글과 영상을 통해 기록하며 동료들과 지식을 나누는 것을 즐깁니다.
         </div>
         
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-3">
           {keywords.map((kw, i) => (
-            <span key={i} className="px-4 py-2 bg-white border border-neutral-200 rounded-2xl text-sm font-medium text-neutral-500">
+            <span key={i} className="px-5 py-2.5 liquid-glass rounded-2xl text-sm font-medium text-neutral-600">
               # {kw}
             </span>
           ))}
@@ -299,37 +299,37 @@ function ProjectsView() {
     { 
       type: 'Micro SaaS', 
       title: '프로덕트로그', 
-      desc: '1인 개발자를 위한 피드백 & 프로덕트 관리 플랫폼', 
+      desc: '1인 개발자를 위한 피드백 및 프로덕트 통합 관리 플랫폼입니다.', 
       tech: 'Next.js, Convex, Clerk, Shadcn, Tailwind CSS',
       link: 'https://productlog.xyz'
     },
     { 
       type: 'Micro SaaS', 
       title: '인디로그', 
-      desc: '1인 기업가를 위한 프로필 사이트 플랫폼', 
+      desc: '1인 기업가들의 개성을 담아내는 프로필 사이트 빌더입니다.', 
       tech: 'Next.js, Convex, Clerk, Shadcn, Tailwind CSS',
       link: 'https://indielog.xyz'
     },
     { 
-      type: '바이브 코딩 입문서', 
+      type: 'Technical Book', 
       title: '커서×AI로 완성하는 나만의 웹 서비스', 
-      desc: 'AI 코딩 도구 Cursor 실전 가이드', 
-      tech: '길벗',
+      desc: 'AI 코딩 도구 Cursor를 활용한 실전 웹 서비스 개발 가이드북입니다.', 
+      tech: '길벗 출판사',
       link: 'https://product.kyobobook.co.kr/detail/S000218729929'
     },
     { 
-      type: 'AI 입문서', 
+      type: 'AI Guide', 
       title: '제미나이로 일 잘하는 법', 
-      desc: '제미나이 활용 업무 가이드', 
-      tech: '길벗',
+      desc: '구글의 차세대 AI 제미나이를 업무에 효율적으로 활용하는 방법을 담았습니다.', 
+      tech: '길벗 출판사',
       link: 'https://product.kyobobook.co.kr/detail/S000219506535'
     },
   ];
 
   return (
-    <div className="py-10">
-      <h2 className="text-2xl font-bold mb-8">프로젝트</h2>
-      <div className="grid gap-6">
+    <div className="py-12">
+      <h2 className="text-3xl font-bold mb-10 tracking-tight">프로젝트</h2>
+      <div className="grid gap-8">
         {projects.map((p, i) => (
           <motion.a 
             key={i}
@@ -339,17 +339,17 @@ function ProjectsView() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.1 }}
-            className="group block rounded-3xl border border-neutral-100 bg-neutral-50 p-6 transition-all hover:border-[#0071E3]/30 hover:bg-white hover:shadow-xl hover:shadow-neutral-200/50"
+            className="group block rounded-[2rem] liquid-glass p-8 transition-all hover:scale-[1.02] active:scale-[0.98]"
           >
-            <div className="flex justify-between items-start mb-4">
-              <span className="px-3 py-1 bg-[#0071E3]/10 text-[#0071E3] rounded-full text-[10px] font-bold uppercase tracking-wider">
+            <div className="flex justify-between items-start mb-6">
+              <span className="px-4 py-1.5 bg-[#0071E3]/10 text-[#0071E3] rounded-full text-[11px] font-bold uppercase tracking-wider">
                 {p.type}
               </span>
-              <ExternalLink size={16} className="text-neutral-300 group-hover:text-[#0071E3] transition-colors" />
+              <ExternalLink size={18} className="text-neutral-300 group-hover:text-[#0071E3] transition-colors" />
             </div>
-            <h3 className="text-lg font-bold mb-2 group-hover:text-[#0071E3] transition-colors">{p.title}</h3>
-            <p className="text-neutral-500 text-sm mb-4">{p.desc}</p>
-            <p className="text-neutral-400 text-[11px] font-medium">{p.tech}</p>
+            <h3 className="text-xl font-bold mb-3 group-hover:text-[#0071E3] transition-colors">{p.title}</h3>
+            <p className="text-neutral-600 text-base leading-relaxed mb-6">{p.desc}</p>
+            <p className="text-neutral-400 text-xs font-medium tracking-wide">{p.tech}</p>
           </motion.a>
         ))}
       </div>
@@ -397,24 +397,24 @@ function SkillsView() {
   ];
 
   return (
-    <div className="py-10">
-      <h2 className="text-2xl font-bold mb-8">기술 스택</h2>
-      <div className="space-y-10">
+    <div className="py-12">
+      <h2 className="text-3xl font-bold mb-10 tracking-tight">기술 스택</h2>
+      <div className="space-y-12">
         {skills.map((s, i) => (
           <div key={i}>
-            <h3 className="text-xs font-bold text-neutral-400 uppercase tracking-widest mb-6 flex items-center gap-2">
-              <span className="h-px w-4 bg-neutral-200" />
+            <h3 className="text-xs font-bold text-neutral-400 uppercase tracking-[0.2em] mb-8 flex items-center gap-3">
+              <span className="h-px w-6 bg-neutral-200" />
               {s.category}
             </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {s.items.map((item, idx) => (
-                <div key={idx} className="flex items-center gap-3 p-3 bg-neutral-50 rounded-2xl border border-neutral-100 hover:border-[#0071E3]/20 transition-colors">
+                <div key={idx} className="flex items-center gap-4 p-4 liquid-glass rounded-2xl hover:scale-[1.05] transition-transform cursor-default">
                   <img 
                     src={`https://cdn.simpleicons.org/${item.slug}`} 
                     alt={item.name} 
-                    className="w-5 h-5 grayscale group-hover:grayscale-0 transition-all"
+                    className="w-6 h-6 grayscale opacity-70"
                   />
-                  <span className="text-sm font-medium text-neutral-700">{item.name}</span>
+                  <span className="text-sm font-semibold text-neutral-700">{item.name}</span>
                 </div>
               ))}
             </div>
@@ -430,38 +430,38 @@ function ExperienceView() {
     { 
       title: '1인 기업가 / 인디 해커', 
       period: '2024 - 현재', 
-      desc: 'Micro SaaS, 웹/앱, 오픈소스 개발, 책 집필, 콘텐츠 제작' 
+      desc: '독립적인 제품 개발 및 기술 콘텐츠 제작을 통해 지속 가능한 비즈니스 모델을 구축하고 있습니다. AI 코딩 도구 활용법에 관한 전문 서적을 집필하였으며, 다수의 Micro SaaS 프로덕트를 운영 중입니다.' 
     },
     { 
       title: '핀테크 스타트업', 
       period: '2022 - 2024', 
-      desc: '프론트엔드 리드' 
+      desc: '프론트엔드 리드로서 기술 스택 선정부터 아키텍처 설계, 팀의 생산성 향상을 위한 개발 문화 구축을 주도했습니다. 사용자 경험 중심의 인터페이스 구현과 성능 최적화에 기여했습니다.' 
     },
     { 
       title: '헬스케어 스타트업', 
       period: '2020 - 2022', 
-      desc: '풀스택 개발자' 
+      desc: '초기 스타트업의 풀스택 개발자로서 제품의 MVP 기획부터 배포까지 전 과정을 경험했습니다. 데이터 기반의 기능 개선과 안정적인 서버 인프라 구축을 담당했습니다.' 
     },
     { 
       title: '대기업', 
       period: '2016 - 2019', 
-      desc: '소프트웨어 엔지니어' 
+      desc: '대규모 시스템의 안정적인 운영과 유지보수를 담당하며 엔지니어링의 기초를 다졌습니다. 복잡한 비즈니스 로직을 효율적으로 처리하는 코드 작성과 협업의 가치를 배웠습니다.' 
     },
   ];
 
   return (
-    <div className="py-10">
-      <h2 className="text-2xl font-bold mb-10">경험</h2>
-      <div className="relative space-y-12 before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-neutral-100">
+    <div className="py-12">
+      <h2 className="text-3xl font-bold mb-12 tracking-tight">경험</h2>
+      <div className="relative space-y-16 before:absolute before:left-[15px] before:top-2 before:bottom-2 before:w-[2px] before:bg-neutral-100">
         {exps.map((e, i) => (
-          <div key={i} className="relative pl-10">
-            <div className="absolute left-0 top-1.5 h-[24px] w-[24px] rounded-full bg-white border-4 border-neutral-100 flex items-center justify-center z-10">
-              <div className="h-1.5 w-1.5 rounded-full bg-[#0071E3]" />
+          <div key={i} className="relative pl-12">
+            <div className="absolute left-0 top-1.5 h-[32px] w-[32px] rounded-full bg-white border-4 border-neutral-50 flex items-center justify-center z-10 shadow-sm">
+              <div className="h-2 w-2 rounded-full bg-[#0071E3]" />
             </div>
-            <div className="flex flex-col gap-1">
-              <span className="text-xs font-bold text-[#0071E3] tracking-wider">{e.period}</span>
-              <h3 className="text-lg font-bold text-neutral-900">{e.title}</h3>
-              <p className="text-neutral-500 text-sm leading-relaxed mt-1">{e.desc}</p>
+            <div className="flex flex-col gap-2">
+              <span className="text-xs font-bold text-[#0071E3] tracking-widest uppercase">{e.period}</span>
+              <h3 className="text-xl font-bold text-neutral-900">{e.title}</h3>
+              <p className="text-neutral-600 text-base leading-relaxed mt-2">{e.desc}</p>
             </div>
           </div>
         ))}
@@ -480,9 +480,9 @@ function ContactView() {
   ];
 
   return (
-    <div className="py-10">
-      <h2 className="text-2xl font-bold mb-8">연락처</h2>
-      <div className="grid gap-4">
+    <div className="py-12">
+      <h2 className="text-3xl font-bold mb-10 tracking-tight">연락처</h2>
+      <div className="grid gap-6">
         {contacts.map((c, i) => {
           const Icon = c.icon;
           return (
@@ -491,14 +491,14 @@ function ContactView() {
               href={c.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 p-5 rounded-3xl bg-neutral-50 border border-neutral-100 transition-all hover:bg-white hover:border-[#0071E3]/30 hover:shadow-lg hover:shadow-neutral-200/50 group"
+              className="flex items-center gap-6 p-6 rounded-[2rem] liquid-glass transition-all hover:scale-[1.02] active:scale-[0.98] group"
             >
-              <div className="h-12 w-12 rounded-2xl bg-white border border-neutral-100 flex items-center justify-center text-neutral-400 group-hover:text-[#0071E3] group-hover:border-[#0071E3]/20 transition-all">
-                <Icon size={24} />
+              <div className="h-14 w-14 rounded-2xl bg-white/50 border border-white/40 flex items-center justify-center text-neutral-400 group-hover:text-[#0071E3] group-hover:scale-110 transition-all">
+                <Icon size={28} />
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest mb-0.5">{c.label}</span>
-                <span className="text-neutral-800 font-semibold group-hover:text-[#0071E3] transition-colors">{c.value}</span>
+                <span className="text-[11px] font-bold text-neutral-400 uppercase tracking-[0.15em] mb-1">{c.label}</span>
+                <span className="text-neutral-800 font-bold text-lg group-hover:text-[#0071E3] transition-colors">{c.value}</span>
               </div>
             </a>
           );
@@ -520,17 +520,17 @@ function ChatView({
   errorMessage: string | null;
 }) {
   return (
-    <div className="flex flex-col h-full py-10">
-      <h2 className="text-2xl font-bold mb-8">성구 AI와 대화하기</h2>
+    <div className="flex flex-col h-full py-12">
+      <h2 className="text-3xl font-bold mb-10 tracking-tight">성구 AI와 대화하기</h2>
       
-      <div className="flex-1 space-y-6">
+      <div className="flex-1 space-y-8">
         {messages.length === 0 && (
-          <div className="flex flex-col items-center justify-center py-20 text-center">
-            <div className="h-16 w-16 rounded-3xl bg-neutral-50 flex items-center justify-center text-[#0071E3] mb-4">
-              <MessageCircle size={32} />
+          <div className="flex flex-col items-center justify-center py-24 text-center">
+            <div className="h-20 w-20 rounded-[2rem] liquid-glass flex items-center justify-center text-[#0071E3] mb-6">
+              <MessageCircle size={40} />
             </div>
-            <p className="text-neutral-500 text-sm">
-              성구의 프로젝트, 경험, 기술에 대해 무엇이든 물어보세요!
+            <p className="text-neutral-500 text-base font-medium">
+              성구의 프로젝트, 경험, 기술에 대해 <br /> 무엇이든 편하게 물어보세요.
             </p>
           </div>
         )}
@@ -538,18 +538,18 @@ function ChatView({
         {messages.map((msg, i) => (
           <div 
             key={i} 
-            className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} items-end gap-2`}
+            className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} items-end gap-3`}
           >
             {msg.role === 'model' && (
-              <div className="h-8 w-8 rounded-full bg-neutral-100 flex items-center justify-center text-[#0071E3] text-[10px] font-bold shrink-0 mb-1">
+              <div className="h-10 w-10 rounded-full liquid-glass flex items-center justify-center text-[#0071E3] text-[11px] font-bold shrink-0 mb-1">
                 성구
               </div>
             )}
             <div 
-              className={`max-w-[80%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
+              className={`max-w-[85%] px-5 py-3.5 rounded-[1.5rem] text-sm leading-relaxed shadow-sm ${
                 msg.role === 'user' 
                   ? 'bg-[#0071E3] text-white rounded-br-none' 
-                  : 'bg-neutral-100 text-neutral-800 rounded-bl-none'
+                  : 'liquid-glass text-neutral-800 rounded-bl-none'
               }`}
             >
               {msg.parts[0].text}
@@ -558,26 +558,26 @@ function ChatView({
         ))}
 
         {isLoading && (
-          <div className="flex justify-start items-end gap-2">
-            <div className="h-8 w-8 rounded-full bg-neutral-100 flex items-center justify-center text-[#0071E3] text-[10px] font-bold shrink-0 mb-1">
+          <div className="flex justify-start items-end gap-3">
+            <div className="h-10 w-10 rounded-full liquid-glass flex items-center justify-center text-[#0071E3] text-[11px] font-bold shrink-0 mb-1">
               성구
             </div>
-            <div className="bg-neutral-100 px-4 py-3 rounded-2xl rounded-bl-none">
-              <div className="flex gap-1">
+            <div className="liquid-glass px-5 py-4 rounded-[1.5rem] rounded-bl-none">
+              <div className="flex gap-1.5">
                 <motion.div 
                   animate={{ opacity: [0.3, 1, 0.3] }} 
                   transition={{ repeat: Infinity, duration: 1 }}
-                  className="h-1.5 w-1.5 rounded-full bg-neutral-400" 
+                  className="h-2 w-2 rounded-full bg-neutral-400" 
                 />
                 <motion.div 
                   animate={{ opacity: [0.3, 1, 0.3] }} 
                   transition={{ repeat: Infinity, duration: 1, delay: 0.2 }}
-                  className="h-1.5 w-1.5 rounded-full bg-neutral-400" 
+                  className="h-2 w-2 rounded-full bg-neutral-400" 
                 />
                 <motion.div 
                   animate={{ opacity: [0.3, 1, 0.3] }} 
                   transition={{ repeat: Infinity, duration: 1, delay: 0.4 }}
-                  className="h-1.5 w-1.5 rounded-full bg-neutral-400" 
+                  className="h-2 w-2 rounded-full bg-neutral-400" 
                 />
               </div>
             </div>
@@ -586,14 +586,14 @@ function ChatView({
 
         {errorMessage && (
           <div className="flex justify-center">
-            <div className="flex items-center gap-2 px-4 py-2 bg-red-50 text-red-600 rounded-full text-xs font-medium border border-red-100">
-              <AlertCircle size={14} />
+            <div className="flex items-center gap-2 px-5 py-2.5 bg-red-50 text-red-600 rounded-full text-xs font-semibold border border-red-100 shadow-sm">
+              <AlertCircle size={16} />
               {errorMessage}
             </div>
           </div>
         )}
 
-        <div ref={chatEndRef} className="h-4" />
+        <div ref={chatEndRef} className="h-8" />
       </div>
     </div>
   );
