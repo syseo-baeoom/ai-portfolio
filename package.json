@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "ai-portfolio build --output public",
+    "build": "next build --output public",
     "start": "next start",
     "lint": "eslint .",
     "clean": "next clean"
